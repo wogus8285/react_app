@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+//
+import './components/ExpenseForm'
+import './components/ExpenseItem'
+import './components/ExpenseList'
+//
+import React, { Component } from 'react'
+import ExpenseForm from './components/ExpenseForm'
+import ExpenseItem from './components/ExpenseItem'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <main className='main-container'>
+        <h1>예산 계산기</h1>
+        <div className='ExpenseForm'>
+          <ExpenseForm />
+        </div>
+        <div className='style2'>
+          <ExpenseItem />
+        </div>
+        <div className='style3'>
+          <p>
+            총지출 :<span>원</span>
+          </p>
+        </div>
+      </main>
+    )
+  }
 }
 
-export default App;
+export default App

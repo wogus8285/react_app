@@ -1,16 +1,21 @@
-import React from 'react'
-import ExpenseList from './ExpenseList'
-import { MdEdit, MdDelete, MdSend } from 'react-icons/md'
+import React, { Component } from 'react'
+import { MdEdit, MdCreate, MdDelete } from 'react-icons/md'
 
-export default function ExpenseItem() {
-  return (
-    <div>
-      <ul className='list'>
-        <ExpenseList />
-      </ul>
-      <button className='btn'>
-        <MdDelete />
-      </button>
-    </div>
-  )
+export class ExpenseList extends Component {
+  render() {
+    return (
+      <li className='item'>
+        <div className='info'>
+          <span className='expense'></span>
+          <span className='amount'>원</span>
+        </div>
+        <div>
+          <button className='edit-btn'>수정</button>
+          <button className='clear-btn'>삭제</button>
+        </div>
+      </li>
+    )
+  }
 }
+
+export default ExpenseList

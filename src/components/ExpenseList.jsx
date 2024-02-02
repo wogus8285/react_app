@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
-import { MdEdit, MdCreate, MdDelete } from 'react-icons/md'
+// import './ExpenseList.css'
+import ExpenseItem from './ExpenseItem'
+import { MdEdit, MdDelete, MdSend } from 'react-icons/md'
 
 export class ExpenseList extends Component {
   render() {
     return (
-      <li className='item'>
-        <div className='info'>
-          <span className='expense'></span>
-          <span className='amount'>원</span>
-        </div>
-        <div>
-          <button className='edit-btn'>수정</button>
-          <button className='clear-btn'>삭제</button>
-        </div>
-      </li>
+      <>
+        <ul className='list'>
+          <ExpenseItem />
+        </ul>
+        <button className='btn'>
+          <MdDelete />
+        </button>
+      </>
     )
   }
 }

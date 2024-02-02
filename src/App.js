@@ -1,12 +1,12 @@
 import './App.css'
 //
 import './components/ExpenseForm'
-import './components/ExpenseItem'
 import './components/ExpenseList'
+import './components/ExpenseItem'
 //
 import React, { Component } from 'react'
 import ExpenseForm from './components/ExpenseForm'
-import ExpenseItem from './components/ExpenseItem'
+import ExpenseItem from './components/ExpenseList'
 
 export class App extends Component {
   render() {
@@ -17,7 +17,7 @@ export class App extends Component {
           <ExpenseForm />
         </div>
         <div className='style2'>
-          <ExpenseItem />
+          <ExpenseList />
         </div>
         <div className='style3'>
           <p>
